@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "521748710226",
+    "project_id": "app-filmes-dw4",
+    "storage_bucket": "app-filmes-dw4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521748710226:android:ad9b05d345f94773bab08b",
+        "android_client_info": {
+          "package_name": "br.com.alexlopes.app_filmes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521748710226-bc97hok05m1lnn8a6u67ctk8ok7jgnmk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.alexlopes.app_filmes",
+            "certificate_hash": "b7a54bbc17d2e38a3afc1c4a09ccaaebc42ae706"
+          }
+        },
+        {
+          "client_id": "521748710226-igo0vbe24bikct5r9hbbjslc31maofsp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYsPdpYvQFJIrA6-WtSY2K4vEY8F59jcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521748710226-39l6jr0l9tpoe1rbmj87u66hlnntn87u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

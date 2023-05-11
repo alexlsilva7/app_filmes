@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 mixin MessagesMixin on GetxController {
-  void messageListener(Rx<MessageModel> message) {
+  void messageListener(Rx<MessageModel?> message) {
     ever<MessageModel?>(message, (model) async {
       if (model != null) {
         Get.snackbar(

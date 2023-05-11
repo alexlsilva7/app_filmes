@@ -23,13 +23,13 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
   Future<void> login() async {
     try {
       loading(true);
-      final result = await _loginService.login();
+      final loginResult = await _loginService.login();
       loading(false);
       message(MessageModel.success(
           title: 'Sucesso', message: 'Login realizado com sucesso'));
-    } on Exception catch (e, s) {
-      print(e);
-      print(s);
+    } on Exception catch (exception, stacktrace) {
+      print(exception);
+      print(stacktrace);
       loading(false);
       message(MessageModel.error(
           title: 'Erro', message: 'Erro ao realizar login com o Google'));

@@ -1,4 +1,6 @@
+import 'package:app_filmes/application/ui/filmes_ui_config.dart';
 import 'package:app_filmes/firebase_options.dart';
+import 'package:app_filmes/modules/home/home_module.dart';
 import 'package:app_filmes/modules/login/login_module.dart';
 import 'package:app_filmes/modules/splash/splash_module.dart';
 import 'package:app_filmes/application/bindings/application_bindings.dart';
@@ -23,15 +25,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Filmes App',
+      title: FilmesUiConfig.title,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: FilmesUiConfig.theme,
       initialBinding: ApplicationBindings(),
       getPages: [
         ...SplashModule().routers,
         ...LoginModule().routers,
+        ...HomeModule().routers,
       ],
     );
   }

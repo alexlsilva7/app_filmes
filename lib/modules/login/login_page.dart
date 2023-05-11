@@ -1,8 +1,9 @@
+import 'package:app_filmes/modules/login/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends GetView<LoginController> {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -44,7 +45,9 @@ class LoginPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      controller.login();
+                    },
                   ),
                 )
               ],

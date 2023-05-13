@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_use_of_protected_member
+
 import 'package:app_filmes/modules/movies/movies_controller.dart';
 import 'package:app_filmes/modules/movies/widgets/movies_filters.dart';
 import 'package:app_filmes/modules/movies/widgets/movies_group.dart';
@@ -14,10 +16,15 @@ class MoviesPage extends GetView<MoviesController> {
       body: SizedBox(
         width: Get.width,
         child: ListView(
-          children: const [
-            MoviesHeader(),
-            MoviesFilters(),
-            MoviesGroup(title: 'Mais populares'),
+          children: [
+            const MoviesHeader(),
+            const MoviesFilters(),
+            MoviesGroup(
+                title: 'Mais populares', movies: controller.popularMovies),
+            MoviesGroup(
+              title: 'Top Filmes',
+              movies: controller.topRatedMovies,
+            ),
           ],
         ),
       ),

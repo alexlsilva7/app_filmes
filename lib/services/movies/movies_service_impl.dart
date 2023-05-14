@@ -1,3 +1,4 @@
+import 'package:app_filmes/models/movie_detail_model.dart';
 import 'package:app_filmes/models/movie_model.dart';
 import 'package:app_filmes/repositories/movies/movies_repository.dart';
 
@@ -10,12 +11,13 @@ class MoviesServiceImpl implements MoviesService {
       : _moviesRepository = moviesRepository;
 
   @override
-  Future<List<MovieModel>> getPopularMovies() async {
-    return _moviesRepository.getPopularMovies();
-  }
+  Future<List<MovieModel>> getPopularMovies() =>
+      _moviesRepository.getPopularMovies();
 
   @override
-  Future<List<MovieModel>> getTopRated() async {
-    return _moviesRepository.getTopRated();
-  }
+  Future<List<MovieModel>> getTopRated() => _moviesRepository.getTopRated();
+
+  @override
+  Future<MovieDetailModel?> getMovieDetail(int id) =>
+      _moviesRepository.getMovieDetail(id);
 }

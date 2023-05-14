@@ -23,6 +23,6 @@ class FilmesUiConfig {
             ),
           ).titleLarge,
         ),
-        scaffoldBackgroundColor: const Color(0xFFE5E5E5),
+        scaffoldBackgroundColor: Colors.white,
       );
 }

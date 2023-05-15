@@ -13,6 +13,7 @@ class MovieDetailContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         MovieDetailContentTitle(movie: movie),
         MovieDetailContentOverview(movie: movie),

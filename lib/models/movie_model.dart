@@ -44,4 +44,22 @@ class MovieModel {
 
   factory MovieModel.fromJson(String source) =>
       MovieModel.fromMap(json.decode(source) as Map<String, dynamic>);
+
+  MovieModel copyWith({
+    int? id,
+    String? title,
+    String? releaseDate,
+    String? posterPath,
+    List<int>? genreIds,
+    bool? favorite,
+  }) {
+    return MovieModel(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      releaseDate: releaseDate ?? this.releaseDate,
+      posterPath: posterPath ?? this.posterPath,
+      genreIds: genreIds ?? this.genreIds,
+      favorite: favorite ?? this.favorite,
+    );
+  }
 }

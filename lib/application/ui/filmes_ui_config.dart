@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class FilmesUiConfig {
   FilmesUiConfig._();
@@ -22,6 +23,10 @@ class FilmesUiConfig {
               fontWeight: FontWeight.w500,
             ),
           ).titleLarge,
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.dark,
+          ),
         ),
         scaffoldBackgroundColor: Colors.white,
       );

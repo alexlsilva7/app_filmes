@@ -103,6 +103,7 @@ class MoviesRepositoryImpl implements MoviesRepository {
           .collection('favorities')
           .doc(userId)
           .collection('movies');
+      print(movie.toMap());
       if (movie.favorite) {
         favoriteColletion.add(movie.toMap());
       } else {

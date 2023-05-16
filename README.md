@@ -6,9 +6,9 @@ Aplicativo de filmes desenvolvido em flutter com o objetivo de treinar o consumo
 
 O aplicativo possui uma tela de login no qual poderá ser feito o login com o Google. Após o login, o usuário será redirecionado para a tela principal do aplicativo, onde poderá ver os filmes mais populares, os filmes mais bem avaliados. Ao clicar em um filme, o usuário será redirecionado para a tela de detalhes do filme, onde poderá ver mais informações sobre o filme. O usuário poderá adicionar o filme aos favoritos, e poderá ver os filmes favoritos na tela de favoritos.
 
-## Desing
+## Design
 
-O desing do aplicativo foi feito utilizando o Figma, e pode ser acessado através do link: https://www.figma.com/file/04HOIeCejfpFp5tw1yD0Xd/App-Filmes?type=design&node-id=0%3A1&t=KzZ5RnZrWGOwUMrD-1
+O design do aplicativo foi feito utilizando o Figma, e pode ser acessado através do link: https://www.figma.com/file/04HOIeCejfpFp5tw1yD0Xd/App-Filmes?type=design&node-id=0%3A1&t=KzZ5RnZrWGOwUMrD-1
 
 ## API
 

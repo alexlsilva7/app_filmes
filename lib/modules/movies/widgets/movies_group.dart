@@ -28,8 +28,9 @@ class MoviesGroup extends GetView<MoviesController> {
           ),
         ),
         const SizedBox(height: 8),
-        SizedBox(
-          height: 233,
+        Container(
+          margin: const EdgeInsets.only(left: 8),
+          height: 270,
           child: Obx(
             () {
               return ListView.builder(

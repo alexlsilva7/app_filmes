@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:shimmer/shimmer.dart';
+
 class MovieCard extends StatelessWidget {
   final DateFormat dateFormat = DateFormat('y');
   final MovieModel movie;
@@ -18,9 +21,9 @@ class MovieCard extends StatelessWidget {
         Get.toNamed('/movie/detail', arguments: movie.id);
       },
       child: Container(
-        padding: const EdgeInsets.only(left: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 8),
         width: 148,
-        height: 233,
+        height: 270,
         child: Stack(
           children: [
             Column(
@@ -32,8 +35,18 @@ class MovieCard extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     clipBehavior: Clip.antiAlias,
-                    child: Image.network(
-                      'https://image.tmdb.org/t/p/w200${movie.posterPath}',
+                    child: CachedNetworkImage(
+                      placeholder: (ctx, url) => Shimmer.fromColors(
+                        baseColor: context.colorGrey,
+                        highlightColor: Colors.white.withOpacity(0.5),
+                        child: Container(
+                          width: 148,
+                          height: 184,
+                          color: Colors.grey[800],
+                        ),
+                      ),
+                      imageUrl:
+                          'https://image.tmdb.org/t/p/w200${movie.posterPath}',
                       width: 148,
                       height: 184,
                       fit: BoxFit.cover,
